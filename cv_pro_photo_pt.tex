@@ -1,0 +1,240 @@
+\documentclass[10pt]{moderncv}
+
+% moderncv styles
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey', 'nocolor' (for B&W) and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvstyle{casual} 
+\moderncvtheme[grey]{classic}
+
+\usepackage[portuguese]{babel}	% replace by the encoding you are using
+\usepackage[utf8]{inputenc}
+
+\usepackage{marvosym}		% Package for the @ "at" symbol
+
+% personal data (the given example is exhaustive; just give what you want)
+\firstname{João}
+\familyname{Faria}
+\title{Curriculum Vit\ae{}}
+
+
+\photo[64pt]{/home/joao/Pictures/foto.jpg}  
+
+%\renewcommand{\listsymbol}{{\fontencoding{U}\fontfamily{ding}\selectfont\tiny\symbol{'102}}} % define another symbol to be used in front of the list items
+
+% the ConTeXt symbol
+\def\ConTeXt{%
+  C%
+  \kern-.0333emo%
+  \kern-.0333emn%
+  \kern-.0667em\TeX%
+  \kern-.0333emt}
+
+% slanted small caps (only with roman family; the sans serif font doesn't exists :-()
+%\usepackage{slantsc}
+%\DeclareFontFamily{T1}{myfont}{}
+%\DeclareFontShape{T1}{myfont}{m}{scsl}{ <-> cork-lmssqbo8}{}
+%\usefont{T1}{myfont}{m}{scsl}Testing the font
+
+
+% command and color used in this document, independently from moderncv 
+\definecolor{sectiontitlecolor}{rgb}{1,0,0}% for web links
+
+\newcommand{\up}[1]{\ensuremath{^\textrm{\scriptsize#1}}}% for text subscripts
+
+% teste para fazer lista dentro do cventry
+\newcommand\mybitem[1]{%
+   \parbox[t]{3mm}{\textbullet}\parbox[t]{10cm}{#1}\\[1.6mm]}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+\maketitle
+%\makequote
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Informação Pessoal}} 
+\cvitem{Nome Completo}{João Pedro de Sousa Faria}
+\cvitem{Data Nascimento}{30 de Maio de 1990}
+\cvitem{Nacionalidade}{Portuguesa}
+\cvitem{Naturalidade}{Santarém}
+\cvitem{Morada}{Rua António Cardoso, 263, RC EF G, 4150-081, Porto}
+\cvitem{Telefone}{966132388}
+\cvitem{}{220177187}
+\cvitem{Email}{joaofaria90\MVAt gmail.com}
+%\cvitem{\textit{Webpage}}{\href{https://sites.google.com/site/joaofariaresearch/}{https://sites.google.com/site/joaofariaresearch/}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Experiência Profissional}}
+
+\cvitem{Cargo Ocupado}{\textbf{Empregado de Armazém}} 
+\cvitem{Empregador}{Casa da Moeda (Randstad)}
+\cvitem{Local Trabalho}{Lisboa}
+\cvitem{Sector}{Comercial, Armazém}
+
+\cvitem{Cargo Ocupado}{\textbf{Accções de degustação / promoções em grandes superficies comerciais}} 
+\cvitem{Empregador}{Promoluz}
+\cvitem{Local Trabalho}{Lisboa}
+\cvitem{Sector}{Comercial, Vendas}
+
+\cvitem{Cargo Ocupado}{\textbf{Assistente de Call-Center}} 
+\cvitem{Empregador}{CCT}
+\cvitem{Local Trabalho}{Lisboa}
+\cvitem{Sector}{Call Center / HelpDesk}
+
+\cvitem{Outra Experiência}{\textbf{Empregado de balcão em bar de familia.}\newline
+	\textbf{Monitor de actividades de divulgação científica.}}
+%\vspace{1cm}
+
+%\vspace*{-1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Formação Académica}}
+
+%\cventry{2011 - 2012}
+%	{Mestrado em Astronomia (ano curricular)} 
+%	{}{\newline Faculdade de Ciências da Universidade do Porto}{Portugal}{\hspace{\fill}}
+
+
+\cventry{2008 - 2011}
+	{Licenciatura em Física – Ramo de Astronomia e Astrofísica} 
+	{}{\newline Faculdade de Ciências da Universidade de Lisboa}{Portugal}{\hspace{\fill}}
+
+
+\cventry{2005 - 2008}
+	{Ensino Secundário - Curso de Ciências e Tecnologias}
+	{\newline Escola Secundária de Camões}{Lisboa}{Portugal}{\hspace{\fill}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Aptidões e Competências Linguísticas}}
+
+	\cvitem{Português}{Língua Materna}
+	\cvitem{Inglês}{Fluente (Expressão e Compreensão Escrita e Oral)}
+	\cvitem{Francês}{Elementar}
+
+\closesection{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Aptidões e Competências Informáticas}}
+
+	\cvitem{Sist. Operativos}{Linux, Microsoft Windows\texttrademark}
+	\cvitem{Programação}{Python, Fortran, \textsc{Matlab}, \textsc{C}}
+	\cvitem{Edição Texto}{\TeX  ( \LaTeX, BibTeX) , Microsoft Office, OpenOffice}
+	%\cventry{Software}{}{}{}{}{
+	\cvitem{Software}{
+		Visualização/Edição Imagens: Photoshop}
+		
+\closesection{}
+
+
+\section{\textsc{Carta de Condução}}
+
+	\cvitem{}{Possuo carta de condução de veículos ligeiros (categoria B)}
+\closesection{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Actividades Científicas}}
+	
+%	\cvitem{Projecto de Licenciatura}{Durante o segundo semestre do 3º ano da Licenciatura, realizei um projecto de investigação com o Doutor Marco Grossi no estudo de cores e metalicidades de galáxias anãs azuis no Enxame da Virgem. Neste trabalho obtive dados fotométricos e espectroscópicos (a partir do SDSS) para uma amostra de galáxias BCD. Com estes dados derivei valores para as metalicidades das galáxias, na tentativa de avaliar o efeito do ambiente denso do enxame na evolução destes objectos.}
+
+%	\cvitem{Posters}{No âmbito do trabalho que realizei no Projecto de Licenciatura, apresentei duas comunicações em forma de poster na conferência Física Ilimitada (FCUL, Maio de 2011) e no XXI Encontro Nacional de Astronomia e Astrofísica (Coimbra, Setembro de 2011).}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Seminários/\textit{Talks}}}
+
+%\cvlistitem{\textit{Cores e Metalicidades de Galáxias Anãs Azuis no Enxame da Virgem} \newline
+%	João Faria, CAAUL, DF-FCUL \newline
+%	13 de Julho de 2011, Lisboa - CAAUL
+%}
+
+%\cvlistitem{\textit{Galáxias sem Bojo e Evolução Galáctica} \newline
+%  João Retrê, Caaul, DF-FCUL \newline
+%  26 de Maio de 2010, Lisboa - FCUL
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Participação em Conferências e Workshops}}
+	
+%	\cvlistitem{ALMA National Comunity Day \newline
+%	27 de Abril de 2011, CAAUL - Lisboa} 
+		
+%	\vspace{0.5cm}
+	
+%	\cvlistitem{Joint European and National Astronomy Meeting (JENAM 2010) \newline
+%	André Moitinho, Jan Palous \newline  
+%	6 a 10 de Setembro de 2010, FCUL - Lisboa} 
+
+%\closesection{}
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Prémios}}
+%	\cvlistitem{Olimpíadas da Astronomia - Edição 2007/2008 \newline
+%			\textbf{5º lugar na Final Nacional}}
+	
+%	\vspace{0.2cm}
+	
+%	\cvlistitem{Torneio Inter-Escolas CV-Robôs - Concurso de 2008 \newline
+%			\textbf{1º Classificado}}
+%\closesection{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Interesses Científicos}}
+%	\cvlistitem{Formação e Evolução de Galáxias}
+%	\cvlistitem{Formação e Evolução Estelar}
+%	\cvlistitem{Modelos Estelares}
+%	\cvlistitem{Detecção de Exoplanetas}
+
+%\closesection{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Actividades Divulgação Científica}}
+
+	\cvitem{Desde Janeiro de 2010}{Co-organizador da actividade pública mensal \textbf{Noites no Observatório} \newline
+		 \textit{Observatório Astronómico de Lisboa}}
+	
+	\cventry{Desde Janeiro de 2010}{Co-organizador de actividades de divulgação científica}{\newline 
+				      Observatório Astronómico de Lisboa}{}{}{
+		\mybitem{Eclipse Total da Lua - 15 de Junho de 2011}
+		\mybitem{Global Star Party - 09 de Abril de 2011}
+		\mybitem{Observação da Lua - 19 de Março de 2011}
+		\mybitem{A Lua Vermelha - 30 de Outubro de 2010}
+	}
+	
+	\cvitem{Verão de 2010}{Monitor do programa \textbf{Ciência Viva no Verão} \newline
+		 \textit{Observatório Astronómico de Lisboa}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Publicações Divulgação Científica}}
+%\cvitem{1}{\textit{Catástrofes cósmicas - O perigo do que não vemos} \newline  O Observatório, Vol.12 Nº9, 2006}
+%\cvitem{2}{\textit{Plutão o planeta anão} \newline O Observatório, Vol.12 Nº8, 2006}
+%\cvitem{3}{\textit{A futura geração de telescópios terrestres - Overwhelmingly Large Telescope} \newline O Observatório, Vol.12 Nº7, 2006}
+%\cvitem{4}{\textit{Astronomia Forense - A Justiça dos Astros} \newline O Observatório, Vol.12 Nº6, 2006}
+%\cvitem{5}{\textit{Catástrofes cósmicas - Impacto de Objectos com o Planeta Terra} \newline O Observatório, Vol.12 Nº4, 2006}
+%\cvitem{6}{\textit{O Telescópio Espacial Hubble e o seu Sucessor (Parte II)} \newline O Observatório, Vol.12 Nº3, 2006}
+%\cvitem{7}{\textit{O Telescópio Espacial Hubble e o seu Sucessor (Parte I)} \newline O Observatório, Vol.12 Nº2, 2006}
+%\cvitem{8}{\textit{Heavens Above} \newline O Observatório, Vol.11 Nº7, 2005}
+%\cvitem{9}{\textit{Físicos comemoram "Annus Mirabilis”} \newline Jornal Notícias de Montijo, Fevereiro de 2005}
+%\cvitem{10}{\textit{Falso alarme de colisão com a Terra} \newline Jornal Notícias de Montijo, Janeiro de 2005}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vfill
+
+\section{\textsc{Actualizado}}
+	\cvitem{}{24 de Janeiro de 2013}
+
+
+\end{document}
+
+

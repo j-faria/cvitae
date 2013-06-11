@@ -1,0 +1,323 @@
+\documentclass[10pt]{moderncv}
+
+% moderncv styles
+% optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey', 'nocolor' (for B&W) and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvstyle{casual} 
+\moderncvtheme[grey]{classic}
+
+\usepackage[portuguese]{babel}	% replace by the encoding you are using
+\usepackage[utf8]{inputenc}
+
+\usepackage{marvosym}		% Package for the @ "at" symbol
+
+% personal data (the given example is exhaustive; just give what you want)
+\firstname{João}
+\familyname{Faria}
+\title{Curriculum Vit\ae{}}
+
+
+%\photo[64pt]{foto_cv.jpg}  
+
+%\renewcommand{\listsymbol}{{\fontencoding{U}\fontfamily{ding}\selectfont\tiny\symbol{'102}}} % define another symbol to be used in front of the list items
+
+% the ConTeXt symbol
+\def\ConTeXt{%
+  C%
+  \kern-.0333emo%
+  \kern-.0333emn%
+  \kern-.0667em\TeX%
+  \kern-.0333emt}
+
+% slanted small caps (only with roman family; the sans serif font doesn't exists :-()
+%\usepackage{slantsc}
+%\DeclareFontFamily{T1}{myfont}{}
+%\DeclareFontShape{T1}{myfont}{m}{scsl}{ <-> cork-lmssqbo8}{}
+%\usefont{T1}{myfont}{m}{scsl}Testing the font
+
+
+% command and color used in this document, independently from moderncv 
+\definecolor{sectiontitlecolor}{rgb}{1,0,0}% for web links
+
+\newcommand{\up}[1]{\ensuremath{^\textrm{\scriptsize#1}}}% for text subscripts
+
+% teste para fazer lista dentro do cventry
+\newcommand\mybitem[1]{%
+   \parbox[t]{3mm}{\textbullet}\parbox[t]{10cm}{#1}\\[1.6mm]}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+\maketitle
+%\makequote
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Informação Pessoal}} 
+\cvitem{Nome Completo}{João Pedro de Sousa Faria}
+\cvitem{Data Nascimento}{30 de Maio de 1990}
+\cvitem{Nacionalidade}{Portuguesa}
+\cvitem{Naturalidade}{Santarém}
+\cvitem{Morada}{Rua Câmara Pestana nº13  1ºDto, 1150-082, Lisboa}
+\cvitem{Telefone}{966132388}
+\cvitem{}{218884641}
+\cvitem{Email}{\href{mailto:joaofaria90@gmail.com}{joaofaria90\MVAt gmail.com}}
+%\cvitem{Email}{joaofaria90\MVAt gmail.com}
+\cvitem{\textit{Webpage}}{\href{http://joaofariaresearch.weebly.com/}{http://joaofariaresearch.weebly.com/}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Formação Académica}}
+\hspace{\fill}
+
+\cventry
+	{2011 - presente}
+	{Mestrado em Astronomia (frequência 1º ano)}
+	{\newline Departamento de Física e Astronomia}
+	{Faculdade de Ciências da Universidade do Porto}
+	{}
+	{\hspace{\fill}}  % arguments 3 to 6 can be left empty
+
+\cventry
+	{2008 - 2011}
+	{Licenciatura em Física – Ramo de Astronomia e Astrofísica} 
+	{\newline Departamento de Física}
+	{Faculdade de Ciências da Universidade de Lisboa}
+	{\newline Média Final: $16$ em $20$ valores}
+	{\hspace{\fill}}
+
+
+%\cventry{2005 - 2008}
+%	{Ensino Secundário - Curso de Ciências e Tecnologias}
+%	{\newline Escola Secundária de Camões}
+%	{Lisboa, Portugal}
+%	{\newline Média Final: $17.3$ em $20$ valores}
+%	{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Unidades Curriculares Relevantes}}
+%
+%\vspace{0.2cm}
+%
+%	\cvitem{\textbf{Licenciatura:}}{}
+%	\cvitem{Astronomia}{Escalas espaciais e temporais em Astronomia; astronomia esférica; magnitudes; produção de energia 					nas estrelas; classificação espectral; formação e evolução estelar; estrutura e dinâmica da Via Láctea; 					cefeidas; supernovas; AGN; quasares; cosmologia; estrutura e evolução do Universo}
+%
+%	\cvitem{Astrofísica}{Produção, emissão e absorção de radiação electromagnética; radiação térmica e radiação não-térmica; 					radiação de corpo negro; leis da radiação; espectros e atmosferas estelares; classes espectrais e 					classes de luminosidade; produção e transporte de energia; equações de estrutura estelar; formação e evolução estelar}
+
+%	\cvitem{\textbf{Mestrado:}}{}
+%	\cvitem{Galáxias}{Tipos e constituição; esquemas de classificação morfológica: Hubble, de Vaucouleurs, CAS; perfil de luminosidade; SEDs; o meio interestelar - detecção, propriedades e correlações; poeira e extinção; relações entre massa e luminosidade: Tully-Fisher, Faber-Jackson, plano fundamental; grupos e enxames de galáxias; segregação morfológica; efeito Butcher-Oemler; galáxias K+A; AGNs: taxonomia e propriedades observacionais; esquema de unificação}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Experiência Profissional}}
+%
+%\cvitem{Cargo Ocupado}{\textbf{Accções de degustação / promoções em grandes superficies comerciais}} 
+%\cvitem{Empregador}{Promoluz}
+%\cvitem{Local Trabalho}{Lisboa}
+%\cvitem{Sector}{Comercial, Vendas}
+%
+%\cvitem{Cargo Ocupado}{\textbf{Assistente de Call-Center}} 
+%\cvitem{Empregador}{CCT}
+%\cvitem{Local Trabalho}{Lisboa}
+%\cvitem{Sector}{Call Center / HelpDesk}
+%
+%\cvitem{Outra Experiência}{\textbf{Empregado de balcão num bar de familia.}\newline
+%	\textbf{Monitor de actividades de divulgação ciêntifica.}}
+%\vspace{1cm}
+
+%\vspace*{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Aptidões e Competências Linguísticas}}
+
+	\cvitem{Português}{Língua Materna}
+	\cvitem{Inglês}{Fluente (Expressão e Compreensão Escrita e Oral)}
+	\cvitem{Francês}{Elementar}
+
+\closesection{}
+
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Aptidões e Competências Informáticas}}
+
+	\cvitem{Sist. Operativos}{Linux, Microsoft Windows\texttrademark}
+	\cvitem{Programação}{C, \textsc{Matlab}, R  \newline Mathematica, IDL, Awk scripting (elementar)}
+	\cvitem{Edição Texto}{\TeX  ( \LaTeX, BibTeX) , Microsoft Office, OpenOffice}
+	%\cventry{Software}{}{}{}{}{
+	\cvitem{Software}{
+		\textbullet \hspace{0.01cm} Visualização/Edição Imagens: Photoshop \newline 
+		\textbullet \hspace{0.01cm} Base de Dados: TopCat \newline 
+		\textbullet \hspace{0.01cm} Produção de gráficos: Gnuplot, TopCat
+		} 
+	\cvitem{Obtenção de Dados}{
+		SDSS (Sky Server/CasJobs),
+		Nasa Extragalactic Database,
+		ESO Archive}
+		
+\closesection{}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Experiência Profissional}}
+
+\cvitem{Cargo Ocupado}{\textbf{Ações de degustação / promoções em grandes superfícies comerciais}} 
+\cvitem{Empregador}{Promoluz}
+\cvitem{Local Trabalho}{Lisboa}
+\cvitem{Sector}{Comercial, Vendas}
+
+\cvitem{Cargo Ocupado}{\textbf{Assistente de Call-Center}} 
+\cvitem{Empregador}{CCT}
+\cvitem{Local Trabalho}{Lisboa}
+\cvitem{Sector}{Call Center / HelpDesk}
+
+\cvitem{Cargo Ocupado}{\textbf{Trabalho temporário em escritório e armazém}} 
+\cvitem{Empregador}{Randstad}
+\cvitem{Local Trabalho}{Lisboa}
+\cvitem{Sector}{Armazém | Escritório}
+
+\cvitem{Outra Experiência}{\textbf{Monitor de actividades de divulgação científica.}}
+%\vspace{1cm}
+
+%\vspace*{-1cm}
+%\section{\textsc{Carta de Condução}}
+%
+%	\cvitem{}{Possuo carta de condução de veículos ligeiros (categoria B)}
+%\closesection{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Actividades Científicas}}
+	
+	\cvitem{Projecto de Licenciatura}{Durante o segundo semestre do 3º ano da Licenciatura, desenvolvi um projecto de investigação com o Doutor Marco Grossi no estudo de cores e metalicidades de galáxias anãs azuis no Enxame da Virgem. Neste trabalho obtive dados fotométricos e espectroscópicos (a partir do SDSS) para uma amostra de galáxias BCD. Com estes dados derivei valores para as metalicidades das galáxias, na tentativa de avaliar o efeito do ambiente denso do enxame na evolução destes objectos.}
+
+	\cvitem{Posters}{No âmbito do trabalho que realizei no Projecto de Licenciatura, apresentei duas comunicações em forma de poster na conferência Física Ilimitada (FCUL, Maio de 2011) e no XXI Encontro Nacional de Astronomia e Astrofísica (Coimbra, Setembro de 2011). \newline
+%\href{http://tinyurl.com/64gkb4a}{Link para o poster}
+}
+
+	\cvitem{Observação com telescópios}{Coordenei e participei em diversas acções de formação sobre montagem e utilização de telescópios no Observatório Astronómico de Lisboa, incluindo formação em reconhecimento do céu nocturno, alinhamento, astrofotografia com CCD, etc.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Seminários/Apresentações}}
+%
+%\cvlistitem{\textit{Cores e Metalicidades de Galáxias Anãs Azuis no Enxame da Virgem} \newline
+%	João Faria, CAAUL, DF-FCUL \newline
+%	13 de Julho de 2011, Lisboa - CAAUL
+%}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Participação em Conferências e Workshops}}
+%
+%	\cvlistitem{XXI Encontro Nacional de Astronomia e Astrofísica\newline
+%	7-10 Setembro 2011, Coimbra, Portugal} 
+%		
+%	\vspace{0.3cm}
+%	
+%	\cvlistitem{ALMA National Comunity Day \newline
+%	27 de Abril de 2011, CAAUL - Lisboa} 
+%		
+%	\vspace{0.3cm}
+%	
+%	\cvlistitem{Joint European and National Astronomy Meeting (JENAM 2010) \newline
+%	André Moitinho, Jan Palous \newline  
+%	6 a 10 de Setembro de 2010, FCUL - Lisboa} 
+%
+%	\vspace{0.3cm}
+%
+%	\cvlistitem{Estágio "Astro-Heliofísica no Observatório Astronómico de Lisboa" \newline
+%	Ciência nas Férias, Ciência Viva \newline  
+%	3 e 4 de Setembro de 2007, OAL - Lisboa} 
+%
+%\closesection{}
+%	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Prémios}}
+	\cvlistitem{Olimpíadas da Astronomia - Edição 2007/2008 \newline
+			\textbf{5º lugar na Final Nacional}}
+	
+	\vspace{0.2cm}
+	
+	\cvlistitem{Torneio Inter-Escolas CV-Robôs - Concurso de 2008 \newline
+			\textbf{1º Classificado}}
+\closesection{}
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Interesses Científicos}}
+%	\cvlistitem{Formação e Evolução de Galáxias}
+%	\cvlistitem{Formação e Evolução Estelar}
+%	\cvlistitem{Modelos Estelares}
+%	\cvlistitem{Detecção de Exoplanetas}
+%
+%\closesection{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Actividades Divulgação Científica}}
+%
+%	\cvitem{Desde Janeiro de 2010}{Co-organizador da actividade pública mensal \textbf{Noites no Observatório} \newline
+%		 \textit{Observatório Astronómico de Lisboa}}
+%	
+%	\cventry{Desde Janeiro de 2010}{Co-organizador de actividades de divulgação científica}{\newline 
+%				      Observatório Astronómico de Lisboa}{}{}{
+%		\mybitem{Eclipse Total da Lua - 15 de Junho de 2011}
+%		\mybitem{Global Star Party - 09 de Abril de 2011}
+%		\mybitem{Observação da Lua - 19 de Março de 2011}
+%		\mybitem{A Lua Vermelha - 30 de Outubro de 2010}
+%	}
+%	
+%	\cvitem{Verão de 2010 e 2011}{Monitor do programa \textbf{Ciência Viva no Verão} \newline
+%		 \textit{Observatório Astronómico de Lisboa}}
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{\textsc{Referências}}
+%
+%\vspace{0.3cm}
+%
+%	\cvlistitem{\textbf{Prof. Doutor João Lin Yun} \newline
+%			Email: \textit{yun@oal.ul.pt} \newline
+%			Centro de Astronomia e Astrofísica da Universidade de Lisboa \newline
+%			Observatório Astronómico de Lisboa \newline
+%			Tapada da Ajuda - Edifício Leste - 2º Piso \newline
+%			1349-018 Lisboa
+%			}
+%
+\vspace{2cm}
+%
+%	\cvlistitem{\textbf{Doutor Marco Grossi} \newline
+%			Email: \textit{grossi@oal.ul.pt} \newline
+%			Centro de Astronomia e Astrofísica da Universidade de Lisboa \newline
+%			Observatório Astronómico de Lisboa \newline
+%			Tapada da Ajuda - Edifício Leste - 2º Piso \newline
+%			1349-018 Lisboa
+%}		
+%\vspace{0.3cm}
+%
+%	\cvlistitem{\textbf{Doutora Catarina Lobo} \newline
+%			Email: \textit{lobo@astro.up.pt} \newline
+%			Centro de Astrofísica da Universidade do Porto \newline
+%			Rua das Estrelas \newline
+%			4150-762 Porto 
+%			}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\textsc{Actualizado}}
+	\cvitem{}{24 de Março de 2012}
+
+
+\end{document}
+
+
