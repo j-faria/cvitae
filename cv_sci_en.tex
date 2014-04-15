@@ -13,13 +13,22 @@
 %\moderncvstyle{casual} 
 \moderncvtheme[grey]{classic}
 
-\usepackage[english, portuguese]{babel}	
+\usepackage[english]{babel}	
 % replace by the encoding you are using
 \usepackage[utf8]{inputenc}
 
 \usepackage{marvosym}		
 % Package for the @ "at" symbol
+\usepackage{multicol} % For multiple column text.
 
+% For \textscale, which I prefer over \sc (small caps).
+% See the \acr command definition below.
+\usepackage{relsize}
+
+\usepackage{tgpagella}
+\usepackage[expansion,protrusion]{microtype}
+% Makes resume-specific commands available.
+%\usepackage{resume}
 
 
 % personal data (the given example is exhaustive; just give what you want)
@@ -29,6 +38,15 @@
 
 
 %\photo[64pt]{../foto.jpg}  
+
+% main title (name) with subtitle (date)
+\newcommand\maintitle[3]{\vbox to 0pt{\hfill\scriptsize\color{gray} #3}\vspace{-0.4em}\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
+
+% \vspace variaties
+\newcommand{\breakvspace}[1]{\pagebreak[2]\vspace{#1}\pagebreak[2]}
+\newcommand{\nobreakvspace}[1]{\nopagebreak[4]\vspace{#1}\nopagebreak[4]}
+% \spacedhrule a horizontal line with some vertical space before and after it
+\newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}}
 
 %\renewcommand{\listsymbol}{{\fontencoding{U}\fontfamily{ding}\selectfont\tiny\symbol{'102}}} % define another symbol to be used in front of the list items
 
@@ -46,10 +64,20 @@
 %\DeclareFontShape{T1}{myfont}{m}{scsl}{ <-> cork-lmssqbo8}{}
 %\usefont{T1}{myfont}{m}{scsl}Testing the font
 
-
+% pretty bullet (created from a much smaller centerdot), \sbull contains its spacing
+\newcommand*\bull{\raisebox{-0.365em}[-1em][-1em]{\textscale{4}{$\cdot$}}}
+\newcommand*\sbull{\ \ \bull \ \ }
 % command and color used in this document, independently from moderncv 
 \definecolor{links}{rgb}{0,0,1}% for web links
 \hypersetup{colorlinks,linkcolor=,urlcolor=links}
+% Setup the hyperrefs witht he right color.
+\usepackage{hyperref}  
+\usepackage{xcolor}
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
+
+% acr command, to quickly mark acronyms for special formatting
+\newcommand*\acr[1]{\textscale{.85}{#1}}
 
 \newcommand{\up}[1]{\ensuremath{^\textrm{\scriptsize#1}}}% for text subscripts
 
@@ -62,22 +90,66 @@
 %----------------------------------------------------------------------------------
 \begin{document}
 
-\maketitle
+%\maketitle
 %\makequote
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\textsc{Personal Information}}
+% title on top of the document
+\maintitle{Jo\~{a}o Pedro de Sousa Faria}{PhD Student}{Last update on \today}
 
-\cvitem{Name}{João Pedro de Sousa Faria}
-\cvitem{Born}{Santarém, Portugal, 30th of May 1990}
-\cvitem{Nacionality}{Portuguese}
-%\cvitem{Naturalidade}{Santarém}
-\cvitem{Address}{Rua Câmara Pestana nº13  1ºDto, 1150-082, Lisboa}
-\cvitem{Phone}{+351 966132388}
-\cvitem{}{+351 218884641}
-\cvitem{Email}{\href{mailto:joao.faria@astro.up.pt}{joao.faria\MVAt astro.up.pt}}
-%\cvitem{Email}{joaofaria90\MVAt gmail.com}
-\cvitem{Webpage}{\href{http://www.astro.up.pt/\~jfaria}{http://www.astro.up.pt/\textasciitilde jfaria}}
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent \href{mailto:joao.faria@astro.up.pt}{joao.faria\MVAt astro.up.pt}\sbull
+\textsmaller{+}351 966132388\sbull
+\href{http://www.astro.up.pt/\~jfaria}{http://www.astro.up.pt/\textasciitilde jfaria}
+\\
+30th of May 1990\sbull
+Santarém, Portugal
+\\
+Largo Ferreira Lapa, 44, 3ºT, 4150-323, Porto
+
+
+
+\spacedhrule{1.1em}{0.4em}  % a horizontal line with some vertical spacing before and after
+%\roottitle{Summary}  % a root section title
+\vspace{-1em}  % some vertical spacing
+\begin{multicols}{2}  % open a multicolumn environment
+\noindent \emph{Creative geek with roots in the open source movement, an entrepreneurial mindset and a passion for delivering value by developing maintainable software.}
+\\
+\\
+Holding an exemplary education record, 
+with Bachelor and Master degree grades within the 25th and 10th top percentiles, 
+I have acquired both theoretical and practical research experience in astrophysics.
+While working on my MSc dissertation, 
+I had the opportunity to strengthen my skills on data analysis and computational modeling methods,
+as well as to present my work on international conferences and several talks, 
+attend advanced lecture courses
+and publish in peer-reviewed journals. 
+More recently I coordinated a team workshop and observed with ESO's HARPS instrument, in La Silla, Chile.
+
+I am looking to secure a PhD position in the Center for Astrophysics of University of Porto, 
+to continue my studies within the extrasolar planets team to which I can bring immediate and
+strategic value.
+\end{multicols}
+\spacedhrule{0.4em}{0.4em}  % a horizontal line with some vertical spacing before and after
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Personal Information}}
+%
+%\cvitem{Name}{João Pedro de Sousa Faria}
+%\cvitem{Born}{Santarém, Portugal, 30th of May 1990}
+%\cvitem{Nacionality}{Portuguese}
+%%\cvitem{Naturalidade}{Santarém}
+%\cvitem{Address}{Rua Câmara Pestana nº13  1ºDto, 1150-082, Lisboa}
+%\cvitem{Phone}{+351 966132388}
+%\cvitem{}{+351 218884641}
+%\cvitem{Email}{\href{mailto:joao.faria@astro.up.pt}{joao.faria\MVAt astro.up.pt}}
+%%\cvitem{Email}{joaofaria90\MVAt gmail.com}
+%\cvitem{Webpage}{\href{http://www.astro.up.pt/\~jfaria}{http://www.astro.up.pt/\textasciitilde jfaria}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -174,12 +246,12 @@
 	          The interesting case of HD41248: stellar activity, no planets?}, 
 	          Santos, N. C., Mortier, A., \underline{Faria, J. P.}, et al., 2014}
 
-	\cvitem{}{\emph{Asteroseismic estimate of helium abundance of a solar analog binary system}, Verma K., \underline{Faria, J. P.}, et al., 2014}
-
 \closesection{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\textsc{Refereed Publications}}
+
+	\cvitem{}{\emph{Asteroseismic estimate of helium abundance of a solar analog binary system}, Verma K., \underline{Faria, J. P.}, et al., 2014 (in revision)}
 
 	\cvitem{}{\emph{On the possibility of using seismic probes to study the core composition in pulsating white dwarfs}, \underline{Faria, J. P.}, Monteiro M.J.P.F.G., Astron. Nachr. 333, 10, 954-957 (2012) \newline \textbf{\small DOI} 10.1002/asna.201211830}
 %	\cvlistitem{"On the possibility of using seismic probes to study the core composition in pulsating white dwarfs", Faria J.P., Monteiro M.J.P.F.G., 2012, \emph{Astronomische Nachrichten} (in press)}
@@ -204,7 +276,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\textsc{Scientific Activities}}
+\section{\textsc{Scientific Activities and Skills}}
 
 	\cvitem{Observing Experience}{ESO 3.6m Telescope: HARPS spectrograph (January 2014)}
 
@@ -302,23 +374,23 @@ CAAUL, DF-FCUL \newline
 
 \section{\textsc{Conferences and Workshops}}
 
-	\cvlistitem{XXIII National Astronomy and Astrophysics Meeting\newline
+	\cvlistitem{XXIII National Astronomy and Astrophysics Meeting (oral presentation)\newline
 	18-19 July 2013, Lisbon, Portugal}
 		
 	\vspace{0.1cm}
 
 
-	\cvlistitem{6th Iberian Meeting on Asteroseismology\newline
+	\cvlistitem{6th Iberian Meeting on Asteroseismology (oral presentation)\newline
 	27-29 May 2013, Aras de los Olmos (Valencia), Spain} 
 		
 	\vspace{0.1cm}
 
-	\cvlistitem{XXII National Astronomy and Astrophysics Meeting\newline
+	\cvlistitem{XXII National Astronomy and Astrophysics Meeting (poster presentation)\newline
 	23-25 September 2012, Porto, Portugal} 
 		
 	\vspace{0.1cm}
 
-	\cvlistitem{The Modern Era of Helio- and Asteroseismology \newline 20-25 May 2012, Universitätszentrum Obergurgl, Austria }
+	\cvlistitem{The Modern Era of Helio- and Asteroseismology (poster presentation) \newline 20-25 May 2012, Universitätszentrum Obergurgl, Austria }
 	
 	\vspace{0.1cm}
 	
@@ -363,7 +435,7 @@ CAAUL, DF-FCUL \newline
 	\cvitem{September 2013}{Monitor of the summer program "\textbf{Escola de Ver\~{a}o de F\'{i}sica}" \newline 
 	     \textit{Faculdade de Ciências da Universidade do Porto}}
 	
-	\cvitem{Summer 2013}{Collaborator of Outreach Unit \newline \textit{Centro de Astrofisica da Universidade do Porto}}
+	\cvitem{Summer 2013}{Collaborator of Outreach Unit (planetarium presenter) \newline \textit{Centro de Astrofisica da Universidade do Porto}}
 
 	\cvitem{2010 - 2011}{Co-organizer of monthly activity "\textbf{Noites no Observatório}" \newline
 		 \textit{Observatório Astronómico de Lisboa}}
@@ -382,7 +454,7 @@ CAAUL, DF-FCUL \newline
 	\cvitem{Summer 2010/2011}{Monitor of the program "\textbf{Ciência Viva no Verão}"\newline
 		 \textit{Observatório Astronómico de Lisboa}}
 		 
-	\cvitem{Amateur Observations}{Coordinated and participated in many workshops about observation and general use of amateur telescopes on the Astronomical Observatory of Lisbon. These include night sky recognition, telescope alignment  and CCD astrophotography.}
+	\cvitem{Amateur Observations}{Coordinated and participated in many workshops about observation and general use of amateur telescopes on the Astronomical Observatory of Lisbon. These include night sky recognition, telescope alignment  and CCD astrophotography. Also participated in other night sky observation activities.}
 
 \closesection{}
 	
@@ -391,8 +463,8 @@ CAAUL, DF-FCUL \newline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\textsc{Language Skills}}
 
-	\cvitem{Portuguese}{Native language}
-	\cvitem{English}{Fluent - written and spoken}
+	\cvitem{Portuguese}{Native speaker}
+	\cvitem{English}{Proficient user (C1)}
 	\cvitem{French}{Basic}
 	\cvitem{Spanish}{Basic}
 
@@ -458,10 +530,10 @@ CAAUL, DF-FCUL \newline
 
 
 \vfill
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\textsc{Updated}}
-\selectlanguage{english}
-	\cvitem{}{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{\textsc{Updated}}
+%\selectlanguage{english}
+%	\cvitem{}{\today}
 
 
 \end{document}
