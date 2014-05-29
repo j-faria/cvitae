@@ -25,6 +25,12 @@
 % See the \acr command definition below.
 \usepackage{relsize}
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\lfoot{center of the footer!}
+\fancyfoot[l]{\addressfont\color{quotecolor}\footnotesize Curriculum Vitae -- João Faria}%
+
+
 \usepackage{tgpagella}
 \usepackage[expansion,protrusion]{microtype}
 % Makes resume-specific commands available.
@@ -105,7 +111,7 @@
 % \\ breaks the line into a new paragraph
 \noindent \href{mailto:joao.faria@astro.up.pt}{joao.faria\MVAt astro.up.pt}\sbull
 \textsmaller{+}351 966132388\sbull
-\href{http://www.astro.up.pt/\~jfaria}{http://www.astro.up.pt/\textasciitilde jfaria}
+\href{http://www.astro.up.pt/\~jfaria}{www.astro.up.pt/\textasciitilde jfaria}
 \\
 30th of May 1990\sbull
 Santarém, Portugal
@@ -118,9 +124,9 @@ Largo Ferreira Lapa, 44, 3ºT, 4150-323, Porto
 %\roottitle{Summary}  % a root section title
 \vspace{-1em}  % some vertical spacing
 \begin{multicols}{2}  % open a multicolumn environment
-\noindent \emph{Creative geek with roots in the open source movement, an entrepreneurial mindset and a passion for delivering value by developing maintainable software.}
-\\
-\\
+%\noindent \emph{Creative geek with roots in the open source movement, an entrepreneurial mindset and a passion for delivering value by developing maintainable software.}
+%\\
+%\\
 Holding an exemplary education record, 
 with Bachelor and Master degree grades within the 25th and 10th top percentiles, 
 I have acquired both theoretical and practical research experience in astrophysics.
@@ -129,10 +135,12 @@ I had the opportunity to strengthen my skills on data analysis and computational
 as well as to present my work on international conferences and several talks, 
 attend advanced lecture courses
 and publish in peer-reviewed journals. 
-More recently I coordinated a team workshop and observed with ESO's HARPS instrument, in La Silla, Chile.
+More recently, I coordinated a team workshop on stellar evolution models, 
+developed an open source code for the analysis of radial velocities 
+and observed with ESO's HARPS instrument, in La Silla, Chile.
 
 I am looking to secure a PhD position in the Center for Astrophysics of University of Porto, 
-to continue my studies within the extrasolar planets team to which I can bring immediate and
+to continue my studies within the extrasolar planets team, to which I believe I can bring immediate and
 strategic value.
 \end{multicols}
 \spacedhrule{0.4em}{0.4em}  % a horizontal line with some vertical spacing before and after
@@ -164,7 +172,7 @@ strategic value.
 	{\newline Faculdade de Ciências \& Centro de Astrofísica (CAUP)}
 	{Universidade do Porto}
 	{\newline 
-	-- courses on High Resolution Spectroscopy and Adaptive Optics in Astronomy}
+	-- advanced courses on \emph{High Resolution Spectroscopy} and \emph{Adaptive Optics in Astronomy}}
 	{}  % arguments 3 to 6 can be left empty
 
 
@@ -173,7 +181,7 @@ strategic value.
 	{Master in Astronomy}
 	{\newline Faculdade de Ciências \& Centro de Astrofísica (CAUP)}
 	{Universidade do Porto}
-	{\newline Project title: \emph{Probing inside binary stars with asteroseismology}
+	{\newline Project title: \emph{Asteroseismology of 16 Cyg A and B}
 	\newline
 	Supervisors: Mário J. P. F. G. Monteiro; Margarida Cunha}
 	{Final average grade: $19$/$20$}  % arguments 3 to 6 can be left empty
@@ -241,17 +249,24 @@ strategic value.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\textsc{Submitted Publications}}
-	\cvitem{}{\emph{The HARPS search for southern extra-solar planets: XXXV. 
-	          The interesting case of HD41248: stellar activity, no planets?}, 
-	          Santos, N. C., Mortier, A., \underline{Faria, J. P.}, et al., 2014}
+%\section{\textsc{Submitted Publications}}
+%
+%
+%\closesection{}
 
-\closesection{}
+
+%%%%%%%%%
+\newpage 
+%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\textsc{Refereed Publications}}
 
-	\cvitem{}{\emph{Asteroseismic estimate of helium abundance of a solar analog binary system}, Verma K., \underline{Faria, J. P.}, et al., 2014 (in revision)}
+	\cvitem{}{\emph{The HARPS search for southern extra-solar planets: XXXV. 
+	          The interesting case of HD41248: stellar activity, no planets?}, 
+	          Santos, N. C., Mortier, A., \underline{Faria, J. P.}, et al., 2014 (accepted for publication in A\&A)}
+
+	\cvitem{}{\emph{Asteroseismic estimate of helium abundance of a solar analog binary system}, Verma K., \underline{Faria, J. P.}, et al., 2014 (accepted for publication in ApJ)}
 
 	\cvitem{}{\emph{On the possibility of using seismic probes to study the core composition in pulsating white dwarfs}, \underline{Faria, J. P.}, Monteiro M.J.P.F.G., Astron. Nachr. 333, 10, 954-957 (2012) \newline \textbf{\small DOI} 10.1002/asna.201211830}
 %	\cvlistitem{"On the possibility of using seismic probes to study the core composition in pulsating white dwarfs", Faria J.P., Monteiro M.J.P.F.G., 2012, \emph{Astronomische Nachrichten} (in press)}
@@ -280,14 +295,13 @@ strategic value.
 
 	\cvitem{Observing Experience}{ESO 3.6m Telescope: HARPS spectrograph (January 2014)}
 
-	\cvitem{MSc Dissertation}{Asteroseismology of the solar-type stars 16 Cyg A and B, using data from the \emph{Kepler} space telescope. 
-	%By comparing different models of the structure of the stars using a larger set of diagnostic tools, beyond the common large and small separations, we aim to better isolate specific regions of the stellar interior and remove some of the effect that the ad-hoc surface corrections have on the modelling.
-%\newline
-%I am also studying the signal originated from acoustic glitches inside the stars and its detection both on second differences and the frequencies themselves.
+	\cvitem{MSc Dissertation}{Asteroseismology of the solar-type stars 16 Cyg A and B, using data from the \emph{Kepler} space telescope. Within this project I developed data analysis tools such as a software package to manipulate sets of oscillation frequencies and a genetic algorithm-based fitting routine. Also, I gained substantial expertise on the MESA stellar evolution code.
+%	By comparing different models of the structure of the stars using seismic diagnostic tools, beyond the common large and small separations, we aimed to better isolate specific regions of the stellar interior and remove some of the effect that the ad-hoc surface corrections have on the modeling. 
+%We also studied the signal originating from acoustic glitches inside the stars and its detection both on second differences and in the frequencies. 
 %The use of diagnostic tools based on combinations of the oscillation frequencies to probe the inner core of the stars is being tested as a way to disentangle modelling degeneracies. 
 }
 	
-	\cvitem{Undergraduate research project}{Research project with Dr. Marco Grossi, studying the colours and metallicities of blue compact dwarf galaxies (BCD) in the Virgo Cluster. 
+	\cvitem{Undergraduate research project}{Research project with Dr. Marco Grossi, studying the colors and metallicities of blue compact dwarf galaxies (BCD) in the Virgo Cluster, using SDSS data. 
 	%In the last semester of the undergraduate degree in Physics, I worked on a
 	%I analysed photometric and spectroscopic data from the SDSS for a sample of BCDs and derived estimates for the metallicities, trying to evaluate the effect of the dense cluster environment in the evolution of these objects.
 	}
@@ -317,7 +331,14 @@ strategic value.
 	Supervised by Doctor Marco Grossi; final project of the undergraduate degree in Physics.}
 	
 
-
+	%%%%%%%%%%%%%
+	\vspace{0.3em}
+	
+	\cvitem{Other skills}{Probability \sbull distributions; maximum likelihood estimation \newline 
+	                      Frequentist statistics \sbull correlation tests; hypothesis testing; confidence intervals  \newline 
+	                      Bayesian statistics\sbull sampling methods; MCMC; model comparison \newline
+	                      Algorithms \sbull genetic and evolutionary algortihms; minimization; regression \newline
+	                      Methods \sbull Monte Carlo, jacknife and bootstrap resampling; time series analysis}
 
 
 
@@ -360,8 +381,12 @@ CAAUL, DF-FCUL \newline
 }
 
 
+%%%%%%%%%
+%\newpage 
+%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\textsc{Scientific Interests}}
+\section{\textsc{Broad Scientific Interests}}
 	\cvlistitem{Exoplanets and host-stars}
 	%\cvlistitem{Stellar Convection Theory and Modelling}
 	\cvlistitem{Computational Astrophysics}
@@ -459,6 +484,9 @@ CAAUL, DF-FCUL \newline
 \closesection{}
 	
 
+%%%%%%%%%
+\newpage 
+%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\textsc{Language Skills}}
@@ -475,12 +503,13 @@ CAAUL, DF-FCUL \newline
 \section{\textsc{Computer Skills}}
 
 	\cvitem{OS}{Linux, Microsoft Windows}
-	\cvitem{Programming}{Python, Fortran, C, \textsc{Matlab}, R, Awk (proficient) \newline Mathematica, IDL  (basic)}
+	\cvitem{Programming}{Python, Fortran (advanced) \newline
+	                     C, \textsc{Matlab}, R, Awk (proficient) \newline Mathematica, IDL  (basic)}
 	\cvitem{Office}{\TeX \hspace{0.01cm} (\LaTeX, BibTeX), Microsoft Office, OpenOffice}
 	%\cventry{Software}{}{}{}{}{
 	\cvitem{Software}{
 		\textbullet \hspace{0.01cm} Image Edition: Photoshop, GIMP\newline 
-		\textbullet \hspace{0.01cm} Database: TopCat \newline 
+		\textbullet \hspace{0.01cm} Database/VO: TopCat \newline 
 		\textbullet \hspace{0.01cm} Plotting: Gnuplot, TopCat
 		} 
 		
@@ -488,7 +517,7 @@ CAAUL, DF-FCUL \newline
 					  \newline
 					  Knowledge of ESO's GASGANO pipeline;
 					  \newline
-					  Presented results with the MESA stellar evolution code.}
+					  Advanced knowledge of the MESA stellar evolution code.}
 		
 	\cvitem{Data Acquisition}{
 		SDSS (Sky Server/CasJobs),
